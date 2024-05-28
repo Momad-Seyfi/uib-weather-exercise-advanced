@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #34495e;
+    
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        color: #fff;
+        margin: 0;
+    }
+}
+
+
+
+/* Navigation */
+nav {
+    text-align: right;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown-Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links li:hover .dropdown-menu {
+    display: block;
+    
+}
+
+.nav-links li:hover a {
+    color: #000000;
+}
+
+/* Burger-Menu */
+.burger-menu {
+    display: none;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: hsl(0, 0%, 100%);
+    margin: 5px;
+}
+
+/* main */
+.card{
+    width: 500px;
+    height: 600px;
+    background: #c5d8f1c7;
+    color: #000000;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-filter: blur(20px);
+    box-shadow: {10px 10px 10px rgba(0, 0, 0, 0.5)};
+    
+}
+
+img{
+    max-width: 6rem;
+
+}
+
+h4{
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+h6{
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+}
+
+svg
+{
+    width: 2rem;
+    height: 2rem;
+    color: lightyellow;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.detail span{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000000;
+}
+.detail:first-child{
+    border-right: .4rem solid #000000;
+}
+
+/* Responsive Style */
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .card
+    {
+        position: absolute;
+        top: 55%;
+
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #3498db;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .nav-links li:hover .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    /* Burgermenu-Style */
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width: 769px) {
+
+    .card
+    {
+        position: absolute;
+        top: 59%;
+        
+    }
+
+    .nav-links {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-links li:hover ul {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .nav-links li ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    /* Burgermenu-Style */
+    .burger-menu {
+        display: none; /* Auf größeren Bildschirmen ausblenden */
+    }
+}
+
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
